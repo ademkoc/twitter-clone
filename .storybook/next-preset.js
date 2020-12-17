@@ -9,8 +9,8 @@ module.exports = {
       ...baseConfig,
       module: {
         ...module,
-        rules: [...(module.rules || [])],
-      },
+        rules: [...(module.rules || [])]
+      }
     }
 
     //
@@ -33,12 +33,12 @@ module.exports = {
           loader: 'css-loader',
           options: {
             importLoaders: 1,
-            modules: true,
-          },
-        },
-      ],
+            modules: true
+          }
+        }
+      ]
     })
 
     return newConfig
-  },
+  }
 }

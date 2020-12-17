@@ -3,11 +3,7 @@ import Button from '../components/button'
 
 export default {
   title: 'Buttons',
-  component: Button,
+  component: Button
 }
 
-export const NormalButton = () => (
-    <Button>
-        Save
-    </Button>
-)
+export const NormalButton = () => <Button>Save</Button>

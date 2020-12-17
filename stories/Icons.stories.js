@@ -3,7 +3,7 @@ import React from 'react'
 import * as Icons from '../components/icons'
 
 export default {
-  title: 'Icons',
+  title: 'Icons'
 }
 
 export const Emoji = () => (

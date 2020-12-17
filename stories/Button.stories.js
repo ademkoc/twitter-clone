@@ -2,14 +2,12 @@ import React from 'react'
 import Button from '../components/button'
 
 export default {
-  title: 'Button',
+  title: 'Buttons',
   component: Button,
 }
 
-export const Emoji = () => (
+export const NormalButton = () => (
     <Button>
-        <span role="img" aria-label="so cool">
-            :D
-        </span>
+        Save
     </Button>
 )

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import NavigationButton from './navigation-button'
-import TitleBold from './title-bold'
+import TextTitle from './text-title'
 import {
   Twitter,
   Home,
@@ -25,12 +25,12 @@ function Navigation({ selectedItemKey }) {
 
       <NavigationButton selected={selectedItemKey === 'home'}>
         <Home />
-        <TitleBold>Home</TitleBold>
+        <TextTitle>Home</TextTitle>
       </NavigationButton>
 
       <NavigationButton selected={selectedItemKey === 'explore'}>
         <Explore />
-        <TitleBold>Explore</TitleBold>
+        <TextTitle>Explore</TextTitle>
       </NavigationButton>
 
       <NavigationButton
@@ -38,32 +38,32 @@ function Navigation({ selectedItemKey }) {
         selected={selectedItemKey === 'notification'}
       >
         <Notification />
-        <TitleBold>Notification</TitleBold>
+        <TextTitle>Notification</TextTitle>
       </NavigationButton>
 
       <NavigationButton selected={selectedItemKey === 'messages'}>
         <Messages />
-        <TitleBold>Messages</TitleBold>
+        <TextTitle>Messages</TextTitle>
       </NavigationButton>
 
       <NavigationButton selected={selectedItemKey === 'bookmark'}>
         <Bookmark />
-        <TitleBold>Bookmark</TitleBold>
+        <TextTitle>Bookmark</TextTitle>
       </NavigationButton>
 
       <NavigationButton selected={selectedItemKey === 'lists'}>
         <Lists />
-        <TitleBold>Lists</TitleBold>
+        <TextTitle>Lists</TextTitle>
       </NavigationButton>
 
       <NavigationButton selected={selectedItemKey === 'profile'}>
         <Profile />
-        <TitleBold>Profile</TitleBold>
+        <TextTitle>Profile</TextTitle>
       </NavigationButton>
 
       <NavigationButton selected={selectedItemKey === 'more'}>
         <More />
-        <TitleBold>More</TitleBold>
+        <TextTitle>More</TextTitle>
       </NavigationButton>
     </nav>
   )

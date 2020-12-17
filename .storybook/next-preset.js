@@ -35,6 +35,15 @@ module.exports = {
             importLoaders: 1,
             modules: true
           }
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              sourceMap: true,
+              config: path.resolve(__dirname, '../postcss.config.js')
+            }
+          }
         }
       ]
     })

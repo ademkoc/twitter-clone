@@ -1,6 +1,7 @@
 import React from 'react'
 
 import * as Icons from '../components/icons'
+import Photo from '../components/photo'
 
 export default {
   title: 'Icons'
@@ -39,4 +40,8 @@ export const Emoji = () => (
     <Icons.Tweet />
     <Icons.Twitter />
   </div>
+)
+
+export const ProfilePhoto = () => (
+  <Photo />
 )

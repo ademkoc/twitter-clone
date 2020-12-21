@@ -16,7 +16,7 @@ import {
 
 import styles from './navigation.module.css'
 
-function Navigation({ selectedItemKey }) {
+function Navigation({ flat=false, selectedItemKey }) {
   return (
     <nav className={styles.nav}>
       <NavigationButton>

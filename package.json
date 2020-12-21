@@ -33,7 +33,6 @@
     "postcss-loader": "^4.1.0",
     "postcss-nested": "^4.2.1",
     "prettier": "^2.2.1",
-    "style-loader": "^2.0.0",
-    "stylelint-config-recommended": "^3.0.0"
+    "style-loader": "^2.0.0"
   }
 }

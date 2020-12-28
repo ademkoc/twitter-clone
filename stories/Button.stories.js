@@ -29,4 +29,5 @@ export const Menu = () => (
     <TextTitle>Home</TextTitle>
   </NavigationButton>
 )
-export const Nav = () => <Navigation selectedItemKey="home" />
+export const Nav = (args) => <Navigation selectedItemKey="home" {...args} />
+Nav.args = { flat: false }

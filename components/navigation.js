@@ -1,70 +1,28 @@
 import React from 'react'
 
-import NavigationButton from './navigation-button'
-import TextTitle from './text-title'
-import {
-  Twitter,
-  Home,
-  Explore,
-  Notification,
-  Messages,
-  Bookmark,
-  Lists,
-  Profile,
-  More
-} from './icons'
-
+import { MENU } from '../constants/index'
 import styles from './navigation.module.css'
 
-function Navigation({ flat=false, selectedItemKey }) {
+import NavigationButton from './navigation-button'
+import TextTitle from './text-title'
+
+function Navigation({ flat = false, selectedItemKey = 'home' }) {
   return (
     <nav className={styles.nav}>
-      <NavigationButton>
-        <Twitter />
-      </NavigationButton>
-
-      <NavigationButton selected={selectedItemKey === 'home'}>
-        <Home />
-        <TextTitle>Home</TextTitle>
-      </NavigationButton>
-
-      <NavigationButton selected={selectedItemKey === 'explore'}>
-        <Explore />
-        <TextTitle>Explore</TextTitle>
-      </NavigationButton>
-
-      <NavigationButton
-        notify="17"
-        selected={selectedItemKey === 'notification'}
-      >
-        <Notification />
-        <TextTitle>Notification</TextTitle>
-      </NavigationButton>
-
-      <NavigationButton selected={selectedItemKey === 'messages'}>
-        <Messages />
-        <TextTitle>Messages</TextTitle>
-      </NavigationButton>
-
-      <NavigationButton selected={selectedItemKey === 'bookmark'}>
-        <Bookmark />
-        <TextTitle>Bookmark</TextTitle>
-      </NavigationButton>
-
-      <NavigationButton selected={selectedItemKey === 'lists'}>
-        <Lists />
-        <TextTitle>Lists</TextTitle>
-      </NavigationButton>
-
-      <NavigationButton selected={selectedItemKey === 'profile'}>
-        <Profile />
-        <TextTitle>Profile</TextTitle>
-      </NavigationButton>
-
-      <NavigationButton selected={selectedItemKey === 'more'}>
-        <More />
-        <TextTitle>More</TextTitle>
-      </NavigationButton>
+      {MENU.map((menu) => {
+        const showTitle = !flat && menu.title.length > 0
+        const selected = menu.key == selectedItemKey
+        return (
+          <NavigationButton
+            key={menu.key}
+            notify={menu.notify}
+            selected={selected}
+          >
+            {selected ? menu.iconSelected : menu.icon}
+            {showTitle && <TextTitle>{menu.title}</TextTitle>}
+          </NavigationButton>
+        )
+      })}
     </nav>
   )
 }

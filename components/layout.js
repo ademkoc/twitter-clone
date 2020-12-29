@@ -3,10 +3,20 @@ import cn from 'classnames'
 
 import styles from './layout.module.css'
 
+import CONST from '../constants/index'
+import Sidebar from '../components/col-sidebar'
+import Main from '../components/col-main'
+import Extra from '../components/col-extra'
+import useWindowSize from '../hooks/useWindowSize'
+
 export default function Layout({ children }) {
+  const size = useWindowSize()
+
   return (
     <div className={cn([styles.layout])}>
-      {children}
+      <Sidebar flat={size.width < CONST.DESKTOP_SIZE}>sidebar</Sidebar>
+      <Main>{children}</Main>
+      {size.width > CONST.TABLET_SIZE && <Extra>extra</Extra>}
     </div>
   )
 }

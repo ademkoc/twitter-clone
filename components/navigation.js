@@ -17,6 +17,8 @@ function Navigation({ flat = false, selectedItemKey = 'home' }) {
             key={menu.key}
             notify={menu.notify}
             selected={selected}
+            href={menu.path}
+            className={styles.navButton}
           >
             {selected ? menu.iconSelected : menu.icon}
             {showTitle && <TextTitle>{menu.title}</TextTitle>}

@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 
-import styles from './stack.module.css'
+import styles from './style.module.css'
 
 export default function Stack({ gap = 10, column = false, children }) {
   return (

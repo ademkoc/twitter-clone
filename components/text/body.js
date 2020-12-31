@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 
-import styles from './text-body.module.css'
+import styles from './body.module.css'
 
 export default function TextBody({
   className,

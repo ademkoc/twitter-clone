@@ -1,9 +1,9 @@
 import React from 'react'
 import cn from 'classnames'
 
-import styles from './navigation-button.module.css'
+import styles from './button.module.css'
 
-import Button from './button'
+import Button from '../button'
 
 export default function NavButton({
   href,

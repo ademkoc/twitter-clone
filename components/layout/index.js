@@ -1,13 +1,13 @@
 import React from 'react'
 import cn from 'classnames'
 
-import styles from './layout.module.css'
+import styles from './style.module.css'
 
-import CONST from '../constants/index'
-import Sidebar from '../components/col-sidebar'
-import Main from '../components/col-main'
-import Extra from '../components/col-extra'
-import useWindowSize from '../hooks/useWindowSize'
+import CONST from '../../constants'
+import Sidebar from '../col/sidebar'
+import Main from '../col/main'
+import Extra from '../col/extra'
+import useWindowSize from '../../hooks/useWindowSize'
 
 export default function Layout({ children }) {
   const size = useWindowSize()

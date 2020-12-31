@@ -1,9 +1,9 @@
 import React from 'react'
 
 import Button from '../components/button'
-import NavigationButton from '../components/navigation-button'
-import Navigation from '../components/navigation'
-import TextTitle from '../components/text-title'
+import NavigationButton from '../components/navigation/button'
+import Navigation from '../components/navigation/navigation'
+import TextTitle from '../components/text/title'
 import { Home } from '../components/icons'
 import ThemeButton from '../components/theme-button'
 import Stack from '../components/stack'

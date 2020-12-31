@@ -1,11 +1,11 @@
 import React from 'react'
 import cn from 'classnames'
 
-import styles from './col-sidebar.module.css'
+import styles from './sidebar.module.css'
 
-import ThemeButton from '../components/theme-button'
-import Navigation from '../components/navigation'
-import ProfileBox from '../components/profile-box'
+import ThemeButton from '../theme-button'
+import Navigation from '../navigation/navigation'
+import ProfileBox from '../profile-box'
 
 export default function Sidebar({ flat = false }) {
   return (

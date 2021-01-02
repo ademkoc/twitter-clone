@@ -12,6 +12,10 @@ import { Tweet } from '../icons'
 export default function Sidebar({ flat = false }) {
   const [isShowModal, setShowModal] = useState(false)
 
+  const onModalClose = () => {
+    setShowModal(false)
+  }
+
   return (
     <div className={cn(styles.sidebar)}>
       <Navigation flat={flat} />
@@ -23,7 +27,9 @@ export default function Sidebar({ flat = false }) {
       </div>
 
       {/* tweet popup */}
-      {isShowModal && <TweetModal onClick={() => setShowModal(false)} />}
+      {isShowModal && (
+        <TweetModal onClick={onModalClose} onModalClose={onModalClose} />
+      )}
 
       <div className={styles.profile}>
         <ProfileBox flat={flat} />

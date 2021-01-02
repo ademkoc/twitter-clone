@@ -8,7 +8,7 @@ export default (req, res) => {
       if (err) {
         return res.status(400).json({ message: 'Oops, bir hata oldu' })
       }
-      res.status(200).json(JSON.stringify(data))
+      res.status(200).json(data)
     }
   )
 }
